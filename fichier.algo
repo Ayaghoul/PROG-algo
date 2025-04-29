@@ -1,0 +1,25 @@
+ALGORITHM chekalgo
+VAR
+    ch: STRING;
+    i:INTEGER:=0;
+    long_phrase: INTEGER :=1;
+    num_mots: INTEGER :=1;
+    num_voyelle: INTEGER:=0;
+    
+BEGIN
+    Read(ch);
+    WHILE(ch[i]<>".") DO
+        long_phrase:= long_phrase +1 ;
+        IF (ch[i]=" ")THEN
+           num_mots:= num_mots +1 ;
+        END_IF
+        IF (ord(Upper(ch[i]in)) in ['65','69','73','79','85','89']) THEN
+             num_voyelle:= num_voyelle +1 ;
+        END_IF
+        i:=i+1;
+    END_WHILE
+   write(long_phrase);
+    write(num_mots);
+     write(num_voyelle);
+
+END
